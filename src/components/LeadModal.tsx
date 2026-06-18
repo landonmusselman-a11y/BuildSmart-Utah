@@ -65,11 +65,14 @@ export default function LeadModal({ isOpen, onClose, defaultBuilder, defaultComm
 
       setStatus('success');
       // GA4 lead conversion event
-      if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-        (window as { gtag?: Function }).gtag('event', 'generate_lead', {
-          event_category: 'engagement',
-          event_label: form.builderInterest || 'General',
-        });
+      if (typeof window !== 'undefined') {
+        const w = window as { gtag?: (...args: unknown[]) => void };
+        if (w.gtag) {
+          w.gtag('event', 'generate_lead', {
+            event_category: 'engagement',
+            event_label: form.builderInterest || 'General',
+          });
+        }
       }
     } catch (err) {
       setStatus('error');
