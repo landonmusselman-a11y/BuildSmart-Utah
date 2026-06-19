@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://build-smart-utah.vercel.app/sitemap.xml

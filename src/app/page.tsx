@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <div className="inline-block bg-warm-100 text-warm-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
+                <div className="inline-block bg-gold-50 text-gold-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
                   Featured Builders
                 </div>
                 <h2 className="section-heading">Utah's Top New Construction Builders</h2>
@@ -343,7 +343,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <div className="inline-block bg-warm-100 text-warm-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
+                <div className="inline-block bg-gold-50 text-gold-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
                   Communities
                 </div>
                 <h2 className="section-heading">Browse Active Utah Communities</h2>
