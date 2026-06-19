@@ -98,7 +98,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         const w = window as { gtag?: (...args: unknown[]) => void };
         if (w.gtag) {
           w.gtag('event', 'booking_confirmed', { event_category: 'engagement', event_label: selectedDate });
-          w.gtag('event', 'conversion', { send_to: 'AW-18251519886/CONVERSION_LABEL' });
+          w.gtag('event', 'conversion', { send_to: 'AW-18251519886/KwdECNHg1cEcEI6vgP9D' });
         }
       }
     } catch (err: unknown) {
