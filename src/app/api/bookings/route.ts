@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
   const { data } = await supabase
     .from('bookings')
     .select('time_slot')
-    .eq('date', date)
+    .eq('booking_date', date)
     .neq('status', 'cancelled');
 
   return NextResponse.json({ booked: (data ?? []).map((r) => r.time_slot) });
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
   const { data: existing } = await supabase
     .from('bookings')
     .select('id')
-    .eq('date', date)
+    .eq('booking_date', date)
     .eq('time_slot', timeSlot)
     .neq('status', 'cancelled')
     .limit(1);
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
 
   // Save booking
   const { error } = await supabase.from('bookings').insert({
-    date,
+    booking_date: date,
     time_slot: timeSlot,
     name,
     email,
