@@ -10,37 +10,37 @@ interface WelcomePopupProps {
 const benefits = [
   {
     icon: DollarSign,
-    color: 'bg-gold-500/15 text-gold-500',
+    color: 'bg-gold-600/20 text-gold-400',
     title: 'Cash Incentive Toward Appliances',
     desc: 'Receive a cash credit applied directly toward the appliances of your choice when you close with me.',
   },
   {
     icon: ClipboardList,
-    color: 'bg-blue-500/15 text-blue-400',
+    color: 'bg-sage-400/20 text-sage-300',
     title: 'Complete Builder Comparison Analysis',
     desc: "I personally compare every builder's incentives, floor plans, quality, and lot inventory so you beat the market.",
   },
   {
     icon: Search,
-    color: 'bg-emerald-500/15 text-emerald-400',
+    color: 'bg-cream-300/25 text-cream-300',
     title: '4-Way Inspection — $500 Value, FREE',
     desc: 'A thorough 4-phase third-party independent inspection at every stage of construction — included at no cost.',
   },
   {
     icon: Wrench,
-    color: 'bg-purple-500/15 text-purple-400',
+    color: 'bg-sage-400/20 text-sage-400',
     title: 'Final Walk-Through Inspection',
     desc: 'Before you hand over your keys, a certified independent inspector walks the home with you to catch anything missed.',
   },
   {
     icon: Home,
-    color: 'bg-rose-500/15 text-rose-400',
+    color: 'bg-gold-600/20 text-gold-300',
     title: 'Design Center Consultation',
     desc: 'I walk you through every upgrade option, tell you which add real resale value, and which to skip — saving thousands.',
   },
   {
     icon: Star,
-    color: 'bg-amber-500/15 text-amber-400',
+    color: 'bg-cream-300/25 text-cream-200',
     title: '800+ New Construction Sales',
     desc: 'I know exactly how builders operate, what to negotiate, and how to protect you from contract to close.',
   },
@@ -84,7 +84,7 @@ export default function WelcomePopup({ onGetStarted }: WelcomePopupProps) {
         {/* Close */}
         <button
           onClick={dismiss}
-          className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-500"
+          className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-cream-100 hover:bg-cream-200 transition-colors text-navy-500"
           aria-label="Close"
         >
           <X size={18} />
@@ -93,7 +93,7 @@ export default function WelcomePopup({ onGetStarted }: WelcomePopupProps) {
         {/* Header band */}
         <div
           className="rounded-t-3xl px-8 pt-8 pb-6 text-white text-center"
-          style={{ background: 'linear-gradient(135deg, #231A10 0%, #3A2B1C 60%, #6E5234 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #1E1C19 0%, #312F2B 60%, #46433E 100%)' }}
         >
           {/* Logo mark */}
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold-500/20 border border-gold-400/30 mb-4">

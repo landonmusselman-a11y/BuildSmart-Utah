@@ -134,7 +134,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             {(['date', 'time', 'form'] as Step[]).map((s, i) => (
               <div key={s} className={`h-1.5 flex-1 rounded-full transition-all ${
                 step === s ? 'bg-gold-500' :
-                (['date','time','form'].indexOf(step) > i) ? 'bg-navy-300' : 'bg-gray-100'
+                (['date','time','form'].indexOf(step) > i) ? 'bg-navy-300' : 'bg-cream-200'
               }`} />
             ))}
           </div>
@@ -146,11 +146,11 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           {step === 'date' && (
             <div>
               <div className="flex items-center justify-between mb-4">
-                <button onClick={prevMonth} className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <button onClick={prevMonth} className="p-2 hover:bg-cream-100 rounded-lg transition-colors">
                   <ChevronLeft size={18} />
                 </button>
                 <span className="font-bold text-navy-900">{MONTHS[viewMonth]} {viewYear}</span>
-                <button onClick={nextMonth} className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <button onClick={nextMonth} className="p-2 hover:bg-cream-100 rounded-lg transition-colors">
                   <ChevronRight size={18} />
                 </button>
               </div>
@@ -158,7 +158,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               {/* Day headers */}
               <div className="grid grid-cols-7 mb-2">
                 {DAYS.map((d) => (
-                  <div key={d} className={`text-center text-[11px] font-semibold py-1 ${d === 'Sun' || d === 'Sat' ? 'text-gray-300' : 'text-navy-400'}`}>
+                  <div key={d} className={`text-center text-[11px] font-semibold py-1 ${d === 'Sun' || d === 'Sat' ? 'text-cream-300' : 'text-navy-400'}`}>
                     {d}
                   </div>
                 ))}
@@ -181,7 +181,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       onClick={() => !disabled && pickDate(day)}
                       className={`h-9 w-9 mx-auto rounded-xl text-sm font-medium transition-all ${
                         isSelected ? 'bg-navy-900 text-white' :
-                        disabled ? 'text-gray-200 cursor-default' :
+                        disabled ? 'text-cream-200 cursor-default' :
                         'hover:bg-gold-50 hover:text-gold-700 text-navy-800'
                       }`}
                     >
@@ -223,13 +223,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         onClick={() => { setSelectedTime(slot); setStep('form'); }}
                         className={`flex items-center gap-2.5 px-4 py-3.5 rounded-xl border text-sm font-semibold transition-all ${
                           taken
-                            ? 'border-gray-100 text-gray-300 bg-gray-50 cursor-default'
+                            ? 'border-cream-200 text-navy-400 bg-cream-50 cursor-default'
                             : 'border-navy-100 text-navy-800 hover:border-gold-400 hover:bg-gold-50 hover:text-gold-700'
                         }`}
                       >
-                        <Clock size={14} className={taken ? 'text-gray-300' : 'text-gold-500'} />
+                        <Clock size={14} className={taken ? 'text-cream-300' : 'text-gold-500'} />
                         {slot}
-                        {taken && <span className="text-[10px] ml-auto text-gray-300">Booked</span>}
+                        {taken && <span className="text-[10px] ml-auto text-cream-300">Booked</span>}
                       </button>
                     );
                   })}
@@ -265,7 +265,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   placeholder="Your full name *"
                   value={form.name}
                   onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
+                  className="w-full px-4 py-3 border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
                 />
                 <input
                   required
@@ -273,21 +273,21 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   placeholder="Email address *"
                   value={form.email}
                   onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
+                  className="w-full px-4 py-3 border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
                 />
                 <input
                   type="tel"
                   placeholder="Phone number"
                   value={form.phone}
                   onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
+                  className="w-full px-4 py-3 border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400"
                 />
                 <textarea
                   rows={2}
                   placeholder="Anything you'd like us to know before the call? (optional)"
                   value={form.notes}
                   onChange={(e) => setForm(f => ({ ...f, notes: e.target.value }))}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 resize-none"
+                  className="w-full px-4 py-3 border border-cream-200 rounded-xl text-sm focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 resize-none"
                 />
               </div>
 

@@ -523,10 +523,10 @@ export default function GetStartedPage() {
               <svg viewBox="0 0 40 38" fill="none" className="w-11 h-11">
                 <rect x="24" y="1" width="4" height="9" rx="0.5" fill="white" />
                 <path d="M2 21L20 3L38 21" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
-                <rect x="13"   y="8"  width="5.5" height="5.5" rx="0.5" fill="#D4A017" />
-                <rect x="21.5" y="8"  width="5.5" height="5.5" rx="0.5" fill="#D4A017" />
-                <rect x="13"   y="15" width="5.5" height="5.5" rx="0.5" fill="#D4A017" />
-                <rect x="21.5" y="15" width="5.5" height="5.5" rx="0.5" fill="#D4A017" />
+                <rect x="13"   y="8"  width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
+                <rect x="21.5" y="8"  width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
+                <rect x="13"   y="15" width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
+                <rect x="21.5" y="15" width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
               </svg>
             </div>
 

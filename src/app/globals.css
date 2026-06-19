@@ -20,28 +20,30 @@
 }
 
 @layer components {
+  /* Primary CTA — Decorous Amber */
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+    @apply inline-flex items-center gap-2 bg-gold-600 hover:bg-gold-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
   }
 
+  /* Secondary CTA — Urbane Bronze */
   .btn-navy {
-    @apply inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+    @apply inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
+    @apply inline-flex items-center gap-2 border-2 border-navy-800 text-navy-800 hover:bg-navy-800 hover:text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 text-navy-600 hover:text-navy-900 hover:bg-navy-50 font-medium px-4 py-2 rounded-lg transition-all duration-200;
+    @apply inline-flex items-center gap-2 text-navy-600 hover:text-navy-900 hover:bg-cream-100 font-medium px-4 py-2 rounded-lg transition-all duration-200;
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200;
+    @apply bg-white rounded-xl shadow-sm border border-cream-200 hover:shadow-md transition-shadow duration-200;
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl font-bold text-navy-900 font-serif tracking-tight;
+    @apply text-3xl md:text-4xl font-bold text-navy-900 font-display tracking-tight;
   }
 
   .section-sub {
@@ -49,50 +51,117 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-3 border border-gray-200 rounded-lg text-navy-900 placeholder-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all bg-white;
+    @apply w-full px-4 py-3 border border-cream-200 rounded-lg text-navy-900 placeholder-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all bg-cream-50;
   }
 
   .label {
     @apply block text-sm font-semibold text-navy-700 mb-1;
   }
 
-  /* Editorial section label — all-caps, wide tracking */
+  /* Editorial section label — small caps */
   .editorial-label {
     @apply text-xs font-semibold uppercase tracking-[0.2em] text-navy-500;
   }
 }
 
-/* BuildSmart Utah hero — new construction aerial, B&W with charcoal overlay */
+/* ── Hero — Evergreen Fog with limewash grain ── */
 .utah-hero-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #98A086;  /* Sage Green */
+  isolation: isolate;
+}
+
+/* Limewash grain overlay — chalky organic texture */
+.utah-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Subtle vignette to add depth */
+.utah-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 60%, transparent 40%, rgba(36, 40, 36, 0.25) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Construction aerial — dark inset sections */
+.construction-photo-bg {
   position: relative;
   overflow: hidden;
   background:
     linear-gradient(
       to bottom,
-      rgba(15, 14, 12, 0.55) 0%,
-      rgba(15, 14, 12, 0.40) 50%,
-      rgba(15, 14, 12, 0.65) 100%
+      rgba(30, 28, 25, 0.58) 0%,
+      rgba(30, 28, 25, 0.42) 50%,
+      rgba(30, 28, 25, 0.68) 100%
     ),
     url('/hero.jpg')
     center / cover no-repeat,
-    linear-gradient(135deg, #0F0E0C 0%, #1C1A17 50%, #0F0E0C 100%);
+    linear-gradient(135deg, #1E1C19 0%, #312F2B 50%, #1E1C19 100%);
 }
 
-/* Warm section background */
+/* Warm section surface — Alabaster tint */
 .section-warm {
-  background-color: #FAF8F4;
+  background-color: #EAE4D4;
 }
 
-/* Section heading uses serif for display impact */
+/* Global limewash grain — apply to any section for chalky texture */
+.grain-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.grain-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Section heading — Fraunces display */
 .section-heading {
-  font-family: var(--font-playfair), Georgia, serif !important;
+  font-family: var(--font-fraunces), Georgia, serif !important;
   letter-spacing: -0.01em;
 }
 
-/* Incentive badge pulse animation — taupe accent */
+/* ── Logo window animations ── */
+@keyframes logoWindowIn {
+  0%   { fill-opacity: 0; transform: scale(0.4); }
+  70%  { transform: scale(1.15); }
+  100% { fill-opacity: 1; transform: scale(1); }
+}
+
+.logo-window {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: logoWindowIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transition: fill 0.3s ease;
+}
+
+.logo-link:hover .logo-window {
+  fill: #CE7A2D;  /* gold-400 — lighter Decorous Amber on hover */
+}
+
+/* ── Incentive badge pulse — amber accent ── */
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(196, 168, 130, 0.4); }
-  50% { box-shadow: 0 0 0 6px rgba(196, 168, 130, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184, 105, 43, 0.35); }
+  50% { box-shadow: 0 0 0 6px rgba(184, 105, 43, 0); }
 }
 
 .incentive-pulse {

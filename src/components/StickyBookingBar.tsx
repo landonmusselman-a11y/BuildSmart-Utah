@@ -50,7 +50,7 @@ export default function StickyBookingBar({ onBook }: StickyBookingBarProps) {
         </button>
         <a
           href="tel:8012317565"
-          className="flex items-center gap-2 bg-white border border-gray-200 text-navy-700 hover:bg-gray-50 font-semibold px-5 py-2.5 rounded-xl text-xs transition-colors shadow-lg"
+          className="flex items-center gap-2 bg-white border border-cream-200 text-navy-700 hover:bg-cream-50 font-semibold px-5 py-2.5 rounded-xl text-xs transition-colors shadow-lg"
         >
           <Phone size={13} />
           (801) 231-7565

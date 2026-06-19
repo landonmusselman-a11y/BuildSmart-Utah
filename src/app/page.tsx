@@ -13,10 +13,11 @@ import IncentiveBadge from '@/components/IncentiveBadge';
 import WelcomePopup from '@/components/WelcomePopup';
 import SearchMapSection from '@/components/SearchMapSection';
 import WhyHireMeSection from '@/components/WhyHireMeSection';
+import LeadCaptureSection from '@/components/LeadCaptureSection';
 import BookingModal from '@/components/BookingModal';
 import StickyBookingBar from '@/components/StickyBookingBar';
 import { Community, SpecHome } from '@/types';
-import { ArrowRight, CheckCircle, Zap, HardHat, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, HardHat, Search, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 
 const howItWorksSteps = [
@@ -76,6 +77,64 @@ export default function HomePage() {
       <main>
         {/* Hero */}
         <HeroSection onGetRepresented={() => setBookingOpen(true)} stats={stats} />
+
+        {/* Lead capture — Meridian-style split section */}
+        <LeadCaptureSection onBookCall={() => setBookingOpen(true)} />
+
+        {/* Horror Stories — the risk of going alone */}
+        <section className="py-20 bg-navy-900 grain-section">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center gap-2 bg-red-900/30 text-red-300 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide border border-red-800/40">
+                <AlertTriangle size={11} />
+                What Can Go Wrong
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-cream-50 mb-4 leading-tight">
+                Real Situations. Preventable Outcomes.
+              </h2>
+              <p className="text-cream-300 text-lg max-w-2xl mx-auto">
+                I&apos;ve watched these play out hundreds of times. The only thing they had in common:
+                the buyer walked in alone.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  title: 'The Price Increase',
+                  detail: '$23,000 added after signing.',
+                  story: "A buyer signed their contract, then received notice their price was increasing $23,000. They called us after the fact. The clause was buried in paragraph 14 of the purchase agreement — language I've seen dozens of times. We would have caught it.",
+                },
+                {
+                  title: 'The Skipped Inspection',
+                  detail: '$47,000 in foundation issues.',
+                  story: 'A buyer decided to skip the independent inspection to save $500. Six months after closing they discovered a $47,000 foundation problem. The builder said it was "within tolerance." They had no independent documentation — and no leverage.',
+                },
+                {
+                  title: 'The Design Center',
+                  detail: '$30,000 in avoidable markups.',
+                  story: 'A couple spent $85,000 at the design center. I walked through their selections after the fact. About $30,000 of those choices had 60–80% builder markup on items that could have been done cheaper after closing by a contractor of their choosing.',
+                },
+              ].map(({ title, detail, story }) => (
+                <div key={title} className="bg-sage-900 border border-sage-800 rounded-2xl p-7">
+                  <div className="text-gold-400 text-[11px] font-bold uppercase tracking-widest mb-2">{detail}</div>
+                  <h3 className="text-cream-50 font-bold text-lg mb-3">{title}</h3>
+                  <p className="text-cream-300 text-sm leading-relaxed">{story}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <button
+                onClick={() => setBookingOpen(true)}
+                className="inline-flex items-center gap-2 bg-gold-600 hover:bg-gold-500 text-white font-bold px-10 py-4 rounded-2xl text-base transition-all shadow-lg hover:-translate-y-0.5"
+              >
+                Talk to Me Before You Sign Anything
+              </button>
+              <p className="text-cream-400 text-xs mt-3">No out-of-pocket fees. Builders pay our representation fee. Licensed with NRE.</p>
+            </div>
+          </div>
+        </section>
 
         {/* Services — what you get when you hire us */}
         <WhyHireMeSection onGetRepresented={() => setBookingOpen(true)} />
@@ -194,7 +253,7 @@ export default function HomePage() {
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                     specFilter === key
                       ? 'bg-navy-900 text-white shadow-sm'
-                      : 'bg-gray-100 text-navy-600 hover:bg-navy-50 hover:text-navy-900'
+                      : 'bg-cream-100 text-navy-600 hover:bg-cream-200 hover:text-navy-900'
                   }`}
                 >
                   {label}
@@ -258,7 +317,7 @@ export default function HomePage() {
                   <div key={inc.id} className="card p-5 flex items-start gap-4">
                     <div
                       className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: builder?.logoColor || '#0f2744' }}
+                      style={{ backgroundColor: builder?.logoColor || '#46433E' }}
                     >
                       <span className="text-white font-bold text-xs">{builder?.logoInitials}</span>
                     </div>

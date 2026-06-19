@@ -9,10 +9,10 @@ function FooterLogo() {
         <svg viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
           <rect x="24" y="1" width="4" height="9" rx="0.5" fill="white" />
           <path d="M2 21L20 3L38 21" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
-          <rect x="13"   y="8"  width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
-          <rect x="21.5" y="8"  width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
-          <rect x="13"   y="15" width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
-          <rect x="21.5" y="15" width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
+          <rect x="13"   y="8"  width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
+          <rect x="21.5" y="8"  width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
+          <rect x="13"   y="15" width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
+          <rect x="21.5" y="15" width="5.5" height="5.5" rx="0.5" fill="#B8692B" />
         </svg>
       </div>
       <div className="flex flex-col leading-none">

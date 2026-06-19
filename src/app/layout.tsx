@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Playfair_Display } from 'next/font/google';
+import { Montserrat, Fraunces } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
@@ -7,7 +7,7 @@ const GA_ID = 'G-286W5912N7';
 const AW_ID = 'AW-18251519886';
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap', weight: ['400', '700', '900'] });
 
 export const metadata: Metadata = {
   title: {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${fraunces.variable}`}>
       <body className="font-sans">
         {children}
         <Script

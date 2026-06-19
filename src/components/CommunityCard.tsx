@@ -14,7 +14,7 @@ const fmt = (n: number) =>
 const statusConfig = {
   selling: { label: 'Now Selling', dot: 'bg-green-500' },
   'coming-soon': { label: 'Coming Soon', dot: 'bg-amber-400' },
-  'sold-out': { label: 'Sold Out', dot: 'bg-gray-400' },
+  'sold-out': { label: 'Sold Out', dot: 'bg-cream-400' },
 };
 
 export default function CommunityCard({ community, onGetInfo }: CommunityCardProps) {
@@ -68,7 +68,7 @@ export default function CommunityCard({ community, onGetInfo }: CommunityCardPro
             <div className="text-xs text-navy-400">From</div>
             <div className="text-sm font-bold text-navy-900">{fmt(community.priceMin)}</div>
           </div>
-          <div className="text-center border-x border-gray-100">
+          <div className="text-center border-x border-cream-200">
             <div className="text-xs text-navy-400">Sq Ft</div>
             <div className="text-sm font-bold text-navy-900">{community.sqftMin.toLocaleString()}+</div>
           </div>
@@ -128,7 +128,7 @@ export default function CommunityCard({ community, onGetInfo }: CommunityCardPro
         )}
 
         {/* Actions */}
-        <div className="flex gap-2 pt-3 border-t border-gray-100">
+        <div className="flex gap-2 pt-3 border-t border-cream-200">
           <button
             onClick={() => onGetInfo?.(community)}
             className="btn-primary flex-1 justify-center text-xs py-2"

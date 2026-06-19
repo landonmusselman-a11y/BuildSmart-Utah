@@ -82,7 +82,7 @@ export default function BuilderCard({ builder }: BuilderCardProps) {
 
         {/* Active incentives */}
         {activeIncentives.length > 0 && (
-          <div className="border-t border-gray-100 pt-3 flex flex-wrap gap-1.5">
+          <div className="border-t border-cream-200 pt-3 flex flex-wrap gap-1.5">
             {activeIncentives.slice(0, 2).map((inc) => (
               <IncentiveBadge key={inc.id} incentive={inc} size="sm" />
             ))}

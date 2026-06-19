@@ -68,7 +68,7 @@ export default function SpecHomeCard({ spec, community, onGetInfo }: SpecHomeCar
             { icon: Maximize2, value: `${spec.sqft.toLocaleString()}`, label: 'Sq Ft' },
             { icon: Car, value: spec.garage, label: 'Garage' },
           ].map(({ icon: Icon, value, label }) => (
-            <div key={label} className="bg-gray-50 rounded-lg p-2 text-center">
+            <div key={label} className="bg-cream-50 rounded-lg p-2 text-center">
               <Icon size={13} className="mx-auto text-navy-400 mb-0.5" />
               <div className="text-sm font-bold text-navy-900 leading-none">{value}</div>
               <div className="text-xs text-navy-400 mt-0.5">{label}</div>

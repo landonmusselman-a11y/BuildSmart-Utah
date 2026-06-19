@@ -234,7 +234,7 @@ export default function LeadModal({ isOpen, onClose, defaultBuilder, defaultComm
               )}
             </button>
 
-            <p className="text-center text-xs text-gray-400">
+            <p className="text-center text-xs text-navy-400">
               No spam. Your info is used only to contact you about Utah new construction.
             </p>
           </form>
