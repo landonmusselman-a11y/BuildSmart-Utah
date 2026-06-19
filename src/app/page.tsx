@@ -10,7 +10,6 @@ import BuilderCard from '@/components/BuilderCard';
 import CommunityCard from '@/components/CommunityCard';
 import SpecHomeCard from '@/components/SpecHomeCard';
 import IncentiveBadge from '@/components/IncentiveBadge';
-import WelcomePopup from '@/components/WelcomePopup';
 import SearchMapSection from '@/components/SearchMapSection';
 import WhyHireMeSection from '@/components/WhyHireMeSection';
 import LeadCaptureSection from '@/components/LeadCaptureSection';
@@ -418,8 +417,6 @@ export default function HomePage() {
       </main>
 
       <Footer />
-
-      <WelcomePopup onGetStarted={() => setBookingOpen(true)} />
 
       <StickyBookingBar onBook={() => setBookingOpen(true)} />
 
