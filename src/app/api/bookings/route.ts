@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     console.error('Booking insert error:', error);
-    return NextResponse.json({ error: 'Failed to save booking' }, { status: 500 });
+    return NextResponse.json({ error: error.message || 'Failed to save booking', code: error.code }, { status: 500 });
   }
 
   // Also add to Brevo contacts
