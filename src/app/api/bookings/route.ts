@@ -10,14 +10,14 @@ const BREVO_API = 'https://api.brevo.com/v3';
 const AGENT_EMAIL = process.env.NEXT_PUBLIC_AGENT_EMAIL || 'Buildsmartutah@gmail.com';
 const AGENT_PHONE = process.env.NEXT_PUBLIC_AGENT_PHONE || '(801) 231-7565';
 
-// GET /api/bookings?date=2026-06-20
+// GET /api/consultations?date=2026-06-20
 // Returns array of booked time slots for that date
 export async function GET(req: NextRequest) {
   const date = req.nextUrl.searchParams.get('date');
   if (!date) return NextResponse.json({ booked: [] });
 
   const { data } = await supabase
-    .from('bookings')
+    .from('consultations')
     .select('time_slot')
     .eq('booking_date', date)
     .neq('status', 'cancelled');
@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({ booked: (data ?? []).map((r) => r.time_slot) });
 }
 
-// POST /api/bookings
+// POST /api/consultations
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const { date, timeSlot, name, email, phone, notes } = body;
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
 
   // Check the slot isn't already taken
   const { data: existing } = await supabase
-    .from('bookings')
+    .from('consultations')
     .select('id')
     .eq('booking_date', date)
     .eq('time_slot', timeSlot)
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Save booking
-  const { error } = await supabase.from('bookings').insert({
+  const { error } = await supabase.from('consultations').insert({
     booking_date: date,
     time_slot: timeSlot,
     name,
