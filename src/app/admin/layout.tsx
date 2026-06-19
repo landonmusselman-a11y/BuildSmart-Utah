@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Admin — BuildSmart Utah',
     description: 'Lead inbox.',
-    url: 'https://newconstructionutah.com/admin',
+    url: 'https://utahnewconstruction.com/admin',
   },
-  alternates: { canonical: 'https://newconstructionutah.com/admin' },
+  alternates: { canonical: 'https://utahnewconstruction.com/admin' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

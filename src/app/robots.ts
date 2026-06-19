@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin', '/api/'],
       },
     ],
-    sitemap: 'https://newconstructionutah.com/sitemap.xml',
-    host: 'https://newconstructionutah.com',
+    sitemap: 'https://utahnewconstruction.com/sitemap.xml',
+    host: 'https://utahnewconstruction.com',
   };
 }

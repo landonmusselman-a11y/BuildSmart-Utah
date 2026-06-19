@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { mockBuilders } from '@/data/mock';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://newconstructionutah.com';
+  const base = 'https://utahnewconstruction.com';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: base, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },

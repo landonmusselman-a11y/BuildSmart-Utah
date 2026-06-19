@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 
 const GA_ID = 'G-286W5912N7';
+const AW_ID = 'AW-18251519886';
 
 const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'BuildSmart Utah',
-    url: 'https://newconstructionutah.com',
+    url: 'https://utahnewconstruction.com',
     images: [
       {
-        url: 'https://newconstructionutah.com/og-image.jpg',
+        url: 'https://utahnewconstruction.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'BuildSmart Utah — New Construction. Smarter Decisions.',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     title: 'BuildSmart Utah | New Construction. Smarter Decisions.',
     description:
       'Every Utah home builder, every community, every incentive — in one place. Free buyer representation.',
-    images: ['https://newconstructionutah.com/og-image.jpg'],
+    images: ['https://utahnewconstruction.com/og-image.jpg'],
   },
 };
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_ID}');
+            gtag('config', '${AW_ID}');
           `}
         </Script>
         <Script id="meta-pixel" strategy="afterInteractive">

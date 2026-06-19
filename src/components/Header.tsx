@@ -14,16 +14,16 @@ function Logo() {
     <Link href="/" className="flex items-center gap-3 flex-shrink-0">
       {/* House icon — outline/stroke style matching brand guide */}
       <div className="w-10 h-10 flex-shrink-0">
-        <svg viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+        <svg viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
           {/* Chimney */}
           <rect x="24" y="1" width="4" height="9" rx="0.5" fill="white" />
-          {/* Roof outline — two angled strokes meeting at peak */}
+          {/* Roof outline */}
           <path d="M2 21L20 3L38 21" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
-          {/* Gold 2×2 window panes inside gable */}
-          <rect x="13"   y="8"    width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
-          <rect x="21.5" y="8"    width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
-          <rect x="13"   y="15"   width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
-          <rect x="21.5" y="15"   width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
+          {/* Gold 2×2 windows — in house body below roof line */}
+          <rect x="13"   y="23" width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
+          <rect x="21.5" y="23" width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
+          <rect x="13"   y="30" width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
+          <rect x="21.5" y="30" width="5.5" height="5.5" rx="0.5" fill="#C4A882" />
         </svg>
       </div>
 

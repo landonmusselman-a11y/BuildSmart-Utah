@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Free Utah new construction calculators. Estimate your monthly payment, compare rate buydown options, and budget for hidden move-in costs before you sign.',
   alternates: {
-    canonical: 'https://newconstructionutah.com/calculators',
+    canonical: 'https://utahnewconstruction.com/calculators',
   },
 };
 

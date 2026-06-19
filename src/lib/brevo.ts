@@ -96,7 +96,7 @@ export async function sendLeadNotificationEmail(lead: LeadFormData): Promise<voi
         </div>
       </div>
       <p style="text-align:center;font-size:11px;color:#8e8a83;margin-top:16px">
-        BuildSmart Utah · newconstructionutah.com
+        BuildSmart Utah · utahnewconstruction.com
       </p>
     </div>
   `;

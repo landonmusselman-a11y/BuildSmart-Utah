@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
@@ -157,6 +158,18 @@ export default function LearnPage() {
             )}
           </div>
         </section>
+
+        {/* Soro Blog */}
+        <section className="py-14 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl font-bold text-navy-900 mb-8">Latest Articles</h2>
+            <div id="soro-blog" />
+          </div>
+        </section>
+        <Script
+          src="https://app.trysoro.com/api/embed/54ed599d-0542-450c-b80e-63f92bf16a2c"
+          strategy="afterInteractive"
+        />
 
         {/* Bottom CTA */}
         <section className="bg-navy-900 text-white py-20 px-4">

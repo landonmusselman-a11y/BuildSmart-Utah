@@ -74,13 +74,13 @@ export default function Footer() {
             {/* Social / domain */}
             <div className="flex flex-wrap gap-4 mt-6">
               <a
-                href="https://newconstructionutah.com"
+                href="https://utahnewconstruction.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-xs text-navy-400 hover:text-gold-400 transition-colors font-medium"
               >
                 <Globe size={13} />
-                newconstructionutah.com
+                utahnewconstruction.com
               </a>
               <a
                 href="https://instagram.com/buildsmartutah"

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Compare Utah new construction communities side by side — amenities, HOA, pricing, floor plans, incentives, school districts, and more. Also compare builders head to head.',
   alternates: {
-    canonical: 'https://newconstructionutah.com/compare',
+    canonical: 'https://utahnewconstruction.com/compare',
   },
 };
 

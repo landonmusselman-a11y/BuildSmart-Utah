@@ -30,7 +30,7 @@ export default function TermsOfServicePage() {
             <section>
               <h2 className="text-lg font-bold text-navy-900 mb-3">1. Acceptance of Terms</h2>
               <p>
-                By accessing or using the BuildSmart Utah website at <strong>newconstructionutah.com</strong> ("Site"),
+                By accessing or using the BuildSmart Utah website at <strong>utahnewconstruction.com</strong> ("Site"),
                 or by submitting any form or requesting our services, you agree to be bound by these Terms of
                 Service. If you do not agree to these terms, please do not use the Site.
               </p>
@@ -158,7 +158,7 @@ export default function TermsOfServicePage() {
                 <div>
                   Phone: <a href={`tel:${phone.replace(/\D/g, '')}`} className="text-navy-900 underline">{phone}</a>
                 </div>
-                <div>Website: newconstructionutah.com</div>
+                <div>Website: utahnewconstruction.com</div>
               </div>
             </section>
 

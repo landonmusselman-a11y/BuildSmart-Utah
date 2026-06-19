@@ -93,6 +93,14 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Something went wrong');
       setStep('done');
+      // Fire GA4 + Google Ads conversion on successful booking
+      if (typeof window !== 'undefined') {
+        const w = window as { gtag?: (...args: unknown[]) => void };
+        if (w.gtag) {
+          w.gtag('event', 'booking_confirmed', { event_category: 'engagement', event_label: selectedDate });
+          w.gtag('event', 'conversion', { send_to: 'AW-18251519886/CONVERSION_LABEL' });
+        }
+      }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
     } finally {

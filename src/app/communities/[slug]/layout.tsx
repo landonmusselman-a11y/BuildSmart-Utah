@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = `${community.name} by ${community.builderName} | BuildSmart Utah`;
   const description = `Explore ${community.name} — floor plans, spec homes, incentives, and pricing from ${community.builderName}. Free buyer representation from a new construction specialist.`;
-  const url = `https://newconstructionutah.com/communities/${slug}`;
+  const url = `https://utahnewconstruction.com/communities/${slug}`;
 
   return {
     title,

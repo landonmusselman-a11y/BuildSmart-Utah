@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-lg font-bold text-navy-900 mb-3">1. Who We Are</h2>
               <p>
                 BuildSmart Utah ("we," "us," or "our") is a real estate buyer representation service
-                operating at <strong>newconstructionutah.com</strong>. We help buyers navigate Utah's
+                operating at <strong>utahnewconstruction.com</strong>. We help buyers navigate Utah's
                 new construction market at no cost to them. Our licensed agent is based in Utah and
                 serves buyers across the Wasatch Front and Back.
               </p>
@@ -184,7 +184,7 @@ export default function PrivacyPolicyPage() {
                   Email:{' '}
                   <a href={`mailto:${email}`} className="text-navy-900 underline">{email}</a>
                 </div>
-                <div>Website: newconstructionutah.com</div>
+                <div>Website: utahnewconstruction.com</div>
               </div>
             </section>
 
